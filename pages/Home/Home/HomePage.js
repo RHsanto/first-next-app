@@ -1,16 +1,27 @@
 import * as React from 'react';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Container, Grid } from '@mui/material';
+import Footer from '../Footer/Footer';
+import Popular from '../AllCourses/Popular';
+import HeroSection from '../Banner/HeroSection';
+import Navbar from '../Navbar/Navbar';
 
-export default function MyCard() {
+
+const HomePage = () => {
   return (
-   <Container sx={{my:'50px'}}>
-     <Grid container rowSpacing={3} columnSpacing={{ xs: 3, sm: 2, md: 3 }}>
+    <>
+  <Navbar/>
+  <HeroSection/>
+  <Container >
+  <Popular/>
+
+  <Typography variant='h3' sx={{textAlign:"center", mt:10, mb:4}}>Our Blogs</Typography>
+     <Grid container spacing={5} sx={{px:8}} >
  
   <Grid item xs={12} sm={6} md={4}>
   <Card sx={{ maxWidth: 345 }}>
@@ -82,8 +93,10 @@ export default function MyCard() {
     </Card>
     </Grid>
 </Grid>
-     
-   </Container>
+</Container>
+<Footer/>
+    </>
   );
 }
 
+export default HomePage;

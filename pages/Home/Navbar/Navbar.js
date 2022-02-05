@@ -11,18 +11,20 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { useRouter } from 'next/router'
+import Link from 'next/link';
 
-const pages = ['Home','Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const About = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+const Navbar = () => {
+  const router = useRouter()
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -35,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <AppBar sx={{background:"#651FFF"}} position="static">
+    <AppBar sx={{background:"#274BFF"}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -76,11 +78,11 @@ const About = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                 <MenuItem  onClick={handleCloseNavMenu}>
+                 <Button  sx={{  color: 'black', display: 'block' }} onClick={() => router.push('/')}>Home</Button>
+                 <Button  sx={{ color: 'black', display: 'block' }} onClick={() => router.push('/about')}>About</Button>
+                 <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Blog/MyCard')}>Blog</Button>
                 </MenuItem>
-              ))}
             </Menu>
           </Box>
           <Typography
@@ -92,15 +94,9 @@ const About = () => {
             NEXT
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Button  sx={{ my: 2, color: 'white', display: 'block' }} onClick={() => router.push('/')}>Home</Button>
+          <Button  sx={{ my: 2, color: 'white', display: 'block' }}onClick={() => router.push('/Home/About/AboutPage')}>About</Button>
+          <Button  sx={{ my: 2, color: 'white', display: 'block' }}  onClick={() => router.push('/Home/Blog/MyCard')}>Blog</Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -137,4 +133,4 @@ const About = () => {
     </AppBar>
   );
 };
-export default About;
+export default Navbar;

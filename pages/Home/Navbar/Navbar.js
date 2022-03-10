@@ -83,6 +83,7 @@ const Navbar = () => {
                  <Button  sx={{ color: 'black', display: 'block' }} onClick={() => router.push('/about')}>About</Button>
                  <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Blog/MyCard')}>Blog</Button>
                  <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Courses')}>Courses</Button>
+                 <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Courses')}>Contact</Button>
                 </MenuItem>
             </Menu>
           </Box>

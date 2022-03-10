@@ -82,6 +82,7 @@ const Navbar = () => {
                  <Button  sx={{  color: 'black', display: 'block' }} onClick={() => router.push('/')}>Home</Button>
                  <Button  sx={{ color: 'black', display: 'block' }} onClick={() => router.push('/about')}>About</Button>
                  <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Blog/MyCard')}>Blog</Button>
+                 <Button  sx={{ color: 'black', display: 'block' }}  onClick={() => router.push('/Home/Courses')}>Courses</Button>
                 </MenuItem>
             </Menu>
           </Box>
@@ -97,6 +98,7 @@ const Navbar = () => {
           <Button  sx={{ my: 2, color: 'white', display: 'block' }} onClick={() => router.push('/')}>Home</Button>
           <Button  sx={{ my: 2, color: 'white', display: 'block' }}onClick={() => router.push('/Home/About/AboutPage')}>About</Button>
           <Button  sx={{ my: 2, color: 'white', display: 'block' }}  onClick={() => router.push('/Home/Blog/MyCard')}>Blog</Button>
+          <Button sx={{ my: 2, color: 'white', display: 'block' }} onClick={() => router.push('/Home/Courses')}>Courses</Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

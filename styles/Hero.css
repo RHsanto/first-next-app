@@ -1,0 +1,27 @@
+:root {
+  --violet-color: #651A91;
+  --gray-color: gray;
+  --white-color: #fff;
+}
+*::selection {
+  background: var(--violet-color);
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--violet-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.btn{
+  color:var(--violet-color);
+}

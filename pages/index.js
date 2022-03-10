@@ -1,3 +1,4 @@
+import Ui from "../components/UI/Ui"
 import HomePage from "./Home/Home/HomePage"
 
 function Home() {
@@ -5,6 +6,7 @@ function Home() {
   return (
     <>
   <HomePage/>
+  <Ui/>
     </>
   )
 }

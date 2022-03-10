@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/MyAbout.js", "pages/Home/Blog/MyCard.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/MyAbout.js", "pages/Home/Blog/MyCard.js", "pages/Framer/Refresh.js", "pages/Framer/ContentPlaceholder.js", "pages/Framer/Example.js"],
   "exclude": ["node_modules"]
 }

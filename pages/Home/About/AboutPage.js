@@ -7,6 +7,7 @@ const AboutPage = () => {
       <Navbar/>
      <Container>
      <h1>AboutPage</h1>
+     
      </Container>
     </div>
   );

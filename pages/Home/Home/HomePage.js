@@ -10,18 +10,21 @@ import Footer from '../Footer/Footer';
 import Popular from '../AllCourses/Popular';
 import HeroSection from '../Banner/HeroSection';
 import Navbar from '../Navbar/Navbar';
-
+import Example from '../../Framer/Example'
+import Nested from '../NestedRouted/Nested';
+import Courses from '../Courses';
 
 const HomePage = () => {
   return (
     <>
+  <Example/>
   <Navbar/>
   <HeroSection/>
   <Container >
   <Popular/>
 
   <Typography variant='h3' sx={{textAlign:"center", mt:10, mb:4}}>Our Blogs</Typography>
-     <Grid container spacing={5} sx={{px:8}} >
+     <Grid container spacing={5} sx={{mb:5}} >
  
   <Grid item xs={12} sm={6} md={4}>
   <Card sx={{ maxWidth: 345 }}>
@@ -93,6 +96,7 @@ const HomePage = () => {
     </Card>
     </Grid>
 </Grid>
+<Nested/>
 </Container>
 <Footer/>
     </>

@@ -7,8 +7,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Container, Grid } from '@mui/material';
 import Navbar  from '../Navbar/Navbar'
+import Example from '../../Framer/Example';
  function MyCard() {
   return (
+ <>
+ <Example/>
   <Box sx={{ flexGrow: 1 }}>
   <Navbar/>
   <Container sx={{ my:'50px'}}>
@@ -157,6 +160,7 @@ import Navbar  from '../Navbar/Navbar'
      
    </Container>
   </Box>
+ </>
   );
 }
 
